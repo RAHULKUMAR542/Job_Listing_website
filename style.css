@@ -1,0 +1,146 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f9;
+}
+
+header {
+  background: #2563eb;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.filters input, .filters select, .filters button {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.filters button {
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+}
+
+.job-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.job-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.job-card h3 {
+  margin: 0;
+}
+
+.job-card button {
+  margin-top: 10px;
+  padding: 6px 10px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.save-btn {
+  background: #16a34a;
+}
+
+.pagination {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pagination button {
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+}
+
+.pagination button.active-page {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  margin: 10% auto;
+  width: 300px;
+  border-radius: 8px;
+}
+
+#closeModal {
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.results-summary {
+  text-align: center;
+  margin: 0 0 10px;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.save-btn.saved {
+  background: #9ca3af;
+  cursor: default;
+}
+
+.saved-toggle {
+  margin-left: 12px;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  border: 1px solid #2563eb;
+  background: #ffffff;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+.saved-toggle.active {
+  background: #2563eb;
+  color: #ffffff;
+}

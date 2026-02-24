@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Listing Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Job Finder</h1>
+  </header>
+
+  <section class="filters">
+    <input type="text" id="searchInput" placeholder="Search by Job Title">
+
+    <select id="locationFilter">
+      <option value="">All Locations</option>
+      <option value="Delhi">Delhi</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Remote">Remote</option>
+    </select>
+
+    <select id="categoryFilter">
+      <option value="">All Categories</option>
+      <option value="IT">IT</option>
+      <option value="Marketing">Marketing</option>
+      <option value="Design">Design</option>
+    </select>
+
+    <select id="experienceFilter">
+      <option value="">All Experience</option>
+      <option value="Fresher">Fresher</option>
+      <option value="Mid">Mid</option>
+      <option value="Senior">Senior</option>
+    </select>
+
+    <select id="sortBy">
+      <option value="recent">Sort: Newest</option>
+      <option value="oldest">Sort: Oldest</option>
+      <option value="title">Sort: Title A-Z</option>
+    </select>
+
+    <button id="clearFilters">Clear</button>
+  </section>
+
+  <p class="results-summary">
+    <span id="resultsCount"></span>
+    <button id="toggleSavedView" class="saved-toggle">Show Saved Jobs</button>
+  </p>
+
+  <section id="jobContainer" class="job-container"></section>
+
+  <div class="pagination" id="pagination"></div>
+
+  <!-- Modal -->
+  <div id="jobModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalCompany"></p>
+      <p id="modalLocation"></p>
+      <p id="modalType"></p>
+      <p id="modalSalary"></p>
+      <p id="modalExperience"></p>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
